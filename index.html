@@ -3,63 +3,347 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Denominator: plan, learn, grow</title>
-  <meta name="description" content="Denominator is a free Android app for planning your day, turning what you watch and read into study notes, and limiting distracting apps.">
+  <title>Denominator: learn from anything, plan your day, put the phone down</title>
+  <meta name="description" content="A free Android app. Share a video, post or article and get a study note with highlights and diagrams. Plan your day, get reminded before you forget, and limit the apps that eat your time.">
+  <meta property="og:title" content="Denominator">
+  <meta property="og:description" content="Learn from anything. Plan your day. Put the phone down. Free for Android.">
+  <meta property="og:image" content="https://wallchemist.github.io/denominator-app/media/launch-poster.jpg">
   <link rel="icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Literata:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Literata:opsz,wght@7..72,500;7..72,600&family=Hind+Siliguri:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
-  <div class="glow"></div>
-  <main>
-    <header class="hero">
-      <img src="icon.png" alt="Denominator logo">
-      <div>
-        <h1>Denominator</h1>
-        <div class="tag">PLAN · LEARN · GROW</div>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Bends the light behind the hero glass (Chromium browsers; others get plain frosted glass). -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="refract" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="n"/>
+      <feGaussianBlur in="n" stdDeviation="2" result="nb"/>
+      <feDisplacementMap in="SourceGraphic" in2="nb" scale="38" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <nav class="nav glass" aria-label="Main">
+    <a class="brand" href="#top"><img src="icon.png" alt="">Denominator</a>
+    <ul>
+      <li><a href="#day">What it does</a></li>
+      <li><a href="#ai">Your AI</a></li>
+      <li><a href="#share">Sharing</a></li>
+      <li><a href="#questions">Questions</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+    <a class="btn btn-candle" href="#get">Get the app</a>
+  </nav>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div class="lens glass">
+        <h1>Learn from anything. Keep what matters.</h1>
+        <p class="lead">Share a video, a post or an article and get a study note with the key words highlighted and the diagram drawn. Then plan your day and put the phone down.</p>
+        <div class="actions">
+          <a class="btn btn-candle" href="download/Denominator.apk" download>Download for Android</a>
+          <a class="btn btn-glass" href="#film">Watch the tour</a>
+        </div>
+        <p class="meta">Free, no ads. Works in English and বাংলা.</p>
       </div>
-    </header>
-
-    <p class="lead">A calm, free Android app that helps you do what matters, remember what you learn, and spend less time on your phone.</p>
-
-    <figure class="film">
-      <video controls playsinline preload="metadata" poster="media/launch-poster.jpg" style="width:100%;height:auto;border-radius:16px">
-        <source src="media/launch-film.mp4" type="video/mp4">
-        Your browser can't play this video. <a href="media/launch-film.mp4">Download it</a>.
-      </video>
-      <figcaption>Watch the 70-second tour, sound on.</figcaption>
-    </figure>
-
-    <div class="grid">
-      <div class="card"><b>Plan your day</b><span>Your tasks, calendar and top 3 in one place, with a short brief each morning.</span></div>
-      <div class="card"><b>Learn from anything</b><span>Share a video, article or photo and get a short study note with diagrams.</span></div>
-      <div class="card"><b>Remember it</b><span>Gentle reminders bring your saved notes back at the right moments.</span></div>
-      <div class="card"><b>Focus</b><span>Daily limits and a calm pause screen for the apps that pull you in.</span></div>
-      <div class="card"><b>Assistant</b><span>Ask it to plan your day, quiz you or set app limits, in English or Bangla.</span></div>
-      <div class="card"><b>Yours</b><span>Works on your phone first. Sign in with Google only if you want sync.</span></div>
+      <div class="stack" aria-hidden="true">
+        <div class="phone"><img src="media/note-video.webp" alt=""></div>
+        <div class="phone"><img src="media/today.webp" alt=""></div>
+        <div class="phone"><img src="media/choice.webp" alt=""></div>
+      </div>
     </div>
 
-    <h2>Get the app</h2>
-    <a class="btn" href="download/Denominator.apk" download>⬇ Download for Android</a>
-    <p class="small">Version 1.18.0 · 23 MB · Android 7 or newer (64-bit phones)</p>
-    <p class="small">Older phone and it won't install? Get the <a href="download/Denominator-32bit.apk" download>32-bit version</a>.</p>
-    <ol>
-      <li>Tap the button on your Android phone.</li>
-      <li>Open the downloaded file. If asked, allow <b>Install unknown apps</b> for your browser or Files app, then tap <b>Install</b>.</li>
-      <li>If Play Protect warns you, tap <b>More details → Install anyway</b>. It does this for any app outside the Play Store.</li>
-    </ol>
-    <p>To update, download again and install over the old version. Your data stays.</p>
-    <p>The AI features use Google Gemini with your own free key from <a href="https://aistudio.google.com/apikey">Google AI Studio</a>.</p>
+    <section id="film" style="padding-top:40px">
+      <div class="wrap">
+        <figure class="film glass" style="margin:0">
+          <video controls playsinline preload="metadata" poster="media/launch-poster.jpg" style="width:100%;height:auto">
+            <source src="media/launch-film.mp4" type="video/mp4">
+            Your browser can't play this video. <a href="media/launch-film.mp4">Download it</a>.
+          </video>
+          <figcaption>The whole app in 70 seconds. Turn the sound on.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Questions, bugs or data requests: <a href="mailto:ahmadintisar270@gmail.com">ahmadintisar270@gmail.com</a></p>
+    <section id="day">
+      <div class="wrap">
+        <div class="day-intro read">
+          <h2>A day with Denominator</h2>
+          <p class="lead" style="margin-top:16px">Here is everything the app does, in the order you'd meet it on a normal day.</p>
+        </div>
 
-    <footer>
-      <a href="privacy.html">Privacy policy</a>
-      <a href="terms.html">Terms of service</a>
-      <span>© 2026 Denominator</span>
-    </footer>
+        <article class="moment">
+          <div class="read">
+            <div class="clock">7:30 am</div>
+            <h3>Your day, already summed up</h3>
+            <p class="soft">Open the app and a short brief types itself out: a good-morning with your name, a line about how full the day looks, and a quote picked for that kind of day. Under it sits your whole day in one card.</p>
+            <ul style="--dot: var(--candle)">
+              <li>Top 3: the three things that matter most today.</li>
+              <li>Your schedule, with Google Calendar events in the same list.</li>
+              <li>Tick a task and hear a soft chime. Yesterday's unfinished tasks wait in one tap-to-move card.</li>
+              <li>Plan tomorrow in three minutes each night, with a reminder at a time you choose.</li>
+            </ul>
+          </div>
+          <div class="shots glass"><div class="phone"><img src="media/today.webp" alt="The Today screen: a morning brief greeting Ahmad, and a Your day card with three ticked Top 3 tasks." loading="lazy"></div></div>
+        </article>
+
+        <article class="moment">
+          <div class="read">
+            <div class="clock">10:00 am</div>
+            <h3>Share anything you learn from</h3>
+            <p class="soft">Watching a lecture on YouTube, reading a Facebook post or an article? Tap Share, then Denominator. That's the whole step. The AI reads it and writes a study note while you carry on.</p>
+            <ul style="--dot: var(--rose)">
+              <li>YouTube videos, Facebook posts, web articles, photos and screenshots, or text you paste.</li>
+              <li>Notes come out in the source's language, in English, or in Bangla. Switch any note later.</li>
+              <li>Your own notes too: type something in your own words and give it a date.</li>
+            </ul>
+            <div class="chips"><span class="chip">YouTube</span><span class="chip">Facebook</span><span class="chip">Articles</span><span class="chip">Photos</span><span class="chip">Screenshots</span></div>
+          </div>
+          <div class="shots glass"><div class="phone"><img src="media/share.webp" alt="Android's share menu with a YouTube video about transistors, and Denominator as the first app to share to." loading="lazy"></div></div>
+        </article>
+
+        <article class="moment">
+          <div class="read">
+            <div class="clock">10:01 am</div>
+            <h3>Notes you can see</h3>
+            <p class="soft">Every note opens with the main idea, with the key words marked like a highlighter pen. Then comes a picture of the idea, drawn for you from what you shared.</p>
+            <ul style="--dot: var(--lavender)">
+              <li>Flowcharts for steps and processes.</li>
+              <li>Comparison tables for "this vs that".</li>
+              <li>Timelines and bar charts when the source has dates or numbers.</li>
+              <li>Notes sort themselves into groups (study, faith, health, money and more), or into groups you name yourself.</li>
+            </ul>
+          </div>
+          <div class="shots glass three">
+            <div class="phone"><img src="media/note-video.webp" alt="A note from a YouTube video with highlighted words and a three-step flowchart." loading="lazy"></div>
+            <div class="phone"><img src="media/note-post.webp" alt="A note from a Facebook post with a Do and Don't comparison table." loading="lazy"></div>
+            <div class="phone"><img src="media/note-article.webp" alt="A note from an article with an evening, night and morning timeline." loading="lazy"></div>
+          </div>
+        </article>
+
+        <article class="moment" id="ai">
+          <div class="read">
+            <div class="clock">1:00 pm</div>
+            <h3>Plan it with Claude or ChatGPT</h3>
+            <p class="soft">Already plan with an AI chat? Connect it once and it can work inside Denominator. Ask it to break your thesis into tasks and they land in Projects. Ask for a revision plan and it fills your Today.</p>
+            <ul style="--dot: var(--sea)">
+              <li>Works with Claude (free plan) and ChatGPT, plus other AIs that support connectors.</li>
+              <li>It can read your day, add and update tasks, save projects, search your notes and set app limits.</li>
+              <li>You make the link from your Account page and can switch it off any time.</li>
+            </ul>
+          </div>
+          <div class="shots glass two">
+            <div class="phone"><img src="media/project.webp" alt="A project called Thesis: Smart Grid with six tasks, marked From Claude." loading="lazy"></div>
+            <div class="phone"><img src="media/chatgpt.webp" alt="Today filled with an exam revision plan, marked From ChatGPT." loading="lazy"></div>
+          </div>
+        </article>
+
+        <article class="moment">
+          <div class="read">
+            <div class="clock">4:00 pm</div>
+            <h3>It comes back before you forget</h3>
+            <p class="soft">Most of what we read is gone in a week. Denominator brings each saved note back 1, 3, 7, 16 and 35 days later, with a short line to jog your memory. Never more than one a day.</p>
+            <ul style="--dot: var(--candle)">
+              <li>Tap the notification and the note opens.</li>
+              <li>Pick the time of day that suits you, or turn them off.</li>
+            </ul>
+          </div>
+          <div class="shots glass"><div class="phone"><img src="media/reminder.webp" alt="The lock screen at 6:30 with two Denominator notifications: You saved this 3 days ago, and Your idea for today." loading="lazy"></div></div>
+        </article>
+
+        <article class="moment">
+          <div class="read">
+            <div class="clock">6:00 pm</div>
+            <h3>A breath before the scroll</h3>
+            <p class="soft">Pick the apps that eat your time and give each a daily limit. When you open one, Denominator steps in first with a short breathing screen, then asks if you still want to go in.</p>
+            <ul style="--dot: var(--lavender)">
+              <li>Breathe in, hold, breathe out, with the screen filling and emptying in time.</li>
+              <li>See how many times you've opened it today and how many minutes are left.</li>
+              <li>Focus hours block the apps completely while you study.</li>
+              <li>Step-by-step fixes for Xiaomi, Oppo, Vivo, Samsung and others, which tend to stop apps running in the background.</li>
+            </ul>
+          </div>
+          <div class="shots glass two">
+            <div class="phone"><img src="media/breath.webp" alt="The pause screen asking you to take a deep breath while the screen fills with lavender." loading="lazy"></div>
+            <div class="phone"><img src="media/choice.webp" alt="After the breath: Do you really want to open Instagram? with a button saying I don't want to open Instagram." loading="lazy"></div>
+          </div>
+        </article>
+
+        <article class="moment">
+          <div class="read">
+            <div class="clock">8:00 pm</div>
+            <h3>Just ask</h3>
+            <p class="soft">The assistant knows your day and your notes. Talk to it like a person, in English or Bangla, and it does the work instead of only answering.</p>
+            <ul style="--dot: var(--sea)">
+              <li>"Plan my day around my classes."</li>
+              <li>"Quiz me on my transistor note."</li>
+              <li>"Limit YouTube to 30 minutes a day."</li>
+            </ul>
+          </div>
+          <div class="shots glass"><div class="phone"><img src="media/assistant.webp" alt="The assistant replying to Plan my day around my classes, with chips saying Added 3 tasks and YouTube limited to 30 min." loading="lazy"></div></div>
+        </article>
+
+        <article class="moment">
+          <div class="read">
+            <div class="clock">10:00 pm</div>
+            <h3>Ideas worth keeping</h3>
+            <p class="soft">Before bed, flip through five short ideas, like stories. Each is one line and a paragraph, with art, and you can listen to it read aloud.</p>
+            <ul style="--dot: var(--candle)">
+              <li>Quran verses with Arabic, hadith and duas for daily life.</li>
+              <li>The best ideas from books like Atomic Habits, Deep Work and The Psychology of Money.</li>
+              <li>Stoic wisdom, study science, money and health basics.</li>
+              <li>A daily goal and a streak to keep you coming back.</li>
+            </ul>
+          </div>
+          <div class="fan" aria-label="Four idea cards: a Quran verse, an Atomic Habits idea, a hadith and a Seneca quote.">
+            <img src="media/idea-1.webp" alt="" loading="lazy">
+            <img src="media/idea-0.webp" alt="" loading="lazy">
+            <img src="media/idea-2.webp" alt="" loading="lazy">
+            <img src="media/idea-3.webp" alt="" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="share" style="padding-top:24px">
+      <div class="wrap">
+        <div class="share glass">
+          <div class="read">
+            <h2>Share a note. Skip the work.</h2>
+            <p class="lead" style="margin-top:16px">Made a great note from a lecture? Send it to your class. They get the finished note, highlights and diagrams included, without waiting for the AI.</p>
+            <p class="soft">Share one note or a whole group, like a full course. Friends without the app can still read it on the web. Only the note and your first name are shared, nothing else.</p>
+          </div>
+          <div class="thread" aria-label="Example of a shared note in a chat">
+            <div class="bubble me"><b>How Transistors Work</b>A tiny switch: a small current controls a big one.<span class="link">wallchemist.github.io/denominator-app/s/…</span></div>
+            <div class="bubble">Thanks! Saving it before the quiz.</div>
+            <div class="bubble saved">Saved to your notes. 1 diagram included.</div>
+          </div>
+        </div>
+
+        <div class="extras glass">
+          <div><b>Groups</b><span>Notes sort themselves by topic, or into groups you name.</span></div>
+          <div><b>Home screen widgets</b><span>See today's tasks and add a new one without opening the app.</span></div>
+          <div><b>Google Calendar</b><span>Your events sit in your day, and dated notes go to your calendar.</span></div>
+          <div><b>Backup and sync</b><span>Sign in with Google to keep everything safe and use two phones.</span></div>
+          <div><b>Projects and insights</b><span>Big goals split into steps, and insights on the hours you get the most done.</span></div>
+          <div><b>বাংলা</b><span>The whole app in Bangla, and notes written in Bangla when you want.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get">
+      <div class="wrap">
+        <div class="get glass">
+          <div>
+            <h2>Get Denominator</h2>
+            <p class="lead" style="margin-top:14px">Free, for Android 7 or newer. Version 1.18.0, 23 MB.</p>
+            <div class="actions" style="margin-top:22px">
+              <a class="btn btn-candle" href="download/Denominator.apk" download>Download for Android</a>
+            </div>
+            <p class="small">Phone won't install it? Try the <a href="download/Denominator-32bit.apk" download>version for older phones</a>.</p>
+          </div>
+          <div>
+            <h3 style="font-size:22px;margin-bottom:12px">Installing</h3>
+            <ol>
+              <li>Open this page on your Android phone and tap Download.</li>
+              <li>Open the downloaded file. If Android asks, allow installing apps from your browser.</li>
+              <li>Tap Install, then open Denominator.</li>
+            </ol>
+            <p class="small">The app tells you when a new version is out. Updating keeps your notes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="questions" style="padding-top:24px">
+      <div class="wrap">
+        <h2>Questions</h2>
+        <div class="faq">
+          <details class="glass"><summary>Is it really free?</summary><p>Yes. No ads, no subscription. The AI notes use Google Gemini with a free key you get in a minute. The app walks you through it.</p></details>
+          <details class="glass"><summary>Do I need the AI key for everything?</summary><p>No. Tasks, the brief, Focus, reminders, the Learn feed and saving shared notes all work without it. You only need it for making new notes and for the assistant.</p></details>
+          <details class="glass"><summary>Where does my data go?</summary><p>It stays on your phone. If you sign in with Google, your tasks and notes are backed up to your own account so you don't lose them. When you make a note, what you shared is sent to Google Gemini to write it. Read the <a href="privacy.html">privacy policy</a>.</p></details>
+          <details class="glass"><summary>Why does Focus stop working on my phone?</summary><p>Some phones close apps in the background to save battery. Denominator notices when this happens and shows the exact setting to change for your phone brand.</p></details>
+          <details class="glass"><summary>Is there an iPhone version?</summary><p>Not yet. Denominator is Android only for now.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <div class="wrap feedback">
+        <div class="read">
+          <h2>Tell us what to make better</h2>
+          <p class="lead" style="margin-top:16px">Found a problem, want a feature, or just love something? Every message is read by the person who builds the app.</p>
+          <p class="soft">For a problem, say what you tapped and what happened. Your phone model helps a lot.</p>
+        </div>
+        <form class="form glass" id="fb" novalidate>
+          <fieldset class="kinds">
+            <legend>What's it about?</legend>
+            <label><input type="radio" name="kind" value="idea" checked><span>An idea</span></label>
+            <label><input type="radio" name="kind" value="problem"><span>A problem</span></label>
+            <label><input type="radio" name="kind" value="love"><span>Something I love</span></label>
+            <label><input type="radio" name="kind" value="question"><span>A question</span></label>
+          </fieldset>
+          <div class="field">
+            <label for="fb-msg">Your message</label>
+            <textarea id="fb-msg" name="message" maxlength="3000" required placeholder="For example: I'd love a dark blue theme, or: the app closes when I share a photo."></textarea>
+          </div>
+          <div class="row">
+            <div class="field"><label for="fb-name">Name <small>(optional)</small></label><input id="fb-name" name="name" maxlength="80" autocomplete="name"></div>
+            <div class="field"><label for="fb-contact">Email or WhatsApp <small>(optional)</small></label><input id="fb-contact" name="contact" maxlength="120" autocomplete="email"><small>Only if you'd like a reply.</small></div>
+          </div>
+          <div class="field"><label for="fb-phone">Phone model <small>(optional)</small></label><input id="fb-phone" name="phone_model" maxlength="80" placeholder="For example: Redmi Note 13"></div>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="actions"><button class="btn btn-candle" type="submit" id="fb-send">Send feedback</button></div>
+          <p class="status" id="fb-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Denominator. Made in Bangladesh.</span>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:ahmadintisar270@gmail.com">ahmadintisar270@gmail.com</a>
+    </div>
+  </footer>
+
+  <script>
+  // Feedback goes straight into the app's Supabase "feedback" table.
+  // The public key below can only add feedback; it can't read anything.
+  (function () {
+    const SB = 'https://pidfsvffhpdfxwbswrgx.supabase.co';
+    const KEY = 'sb_publishable_IcRgAvxF61tFRFq1cVuGUg_4HKJJv-t';
+    const form = document.getElementById('fb'), status = document.getElementById('fb-status'), send = document.getElementById('fb-send');
+    const say = (text, cls) => { status.textContent = text; status.className = 'status ' + (cls || ''); };
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = new FormData(form);
+      if (f.get('website')) return; // a bot filled the hidden field
+      const message = String(f.get('message') || '').trim();
+      if (message.length < 5) { say('Write a little more so we can understand it.', 'err'); form.message.focus(); return; }
+      const opt = k => { const v = String(f.get(k) || '').trim(); return v || null; };
+      send.disabled = true; say('Sending…');
+      try {
+        const r = await fetch(SB + '/rest/v1/feedback', {
+          method: 'POST',
+          headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+          body: JSON.stringify({ kind: f.get('kind'), message, name: opt('name'), contact: opt('contact'), phone_model: opt('phone_model') }),
+        });
+        if (!r.ok) throw new Error(r.status);
+        form.reset(); say('Sent. Thank you, it really helps.', 'ok');
+      } catch (err) {
+        const mail = 'mailto:ahmadintisar270@gmail.com?subject=' + encodeURIComponent('Denominator feedback') + '&body=' + encodeURIComponent(message);
+        status.className = 'status err';
+        status.innerHTML = 'Couldn\'t send it right now. <a href="' + mail + '">Email it instead</a>, your message is already filled in.';
+      } finally { send.disabled = false; }
+    });
+  })();
+  </script>
 </body>
 </html>
